@@ -1,3 +1,5 @@
+#define _DEFAULT_SOURCE
+
 #include "tron.h"
 
 #include "bitmap.h"
