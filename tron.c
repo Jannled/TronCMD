@@ -151,19 +151,19 @@ void drive()
 	{
 		gameState = ENDE+1;
 	}
-	if(getBit(p1.bmap, p1.pos.x, p1.pos.y))
+	else if(getBit(p1.bmap, p1.pos.x, p1.pos.y))
 	{
 		gameState = ENDE+2;
 	}
-	if(getBit(p2.bmap, p1.pos.x, p1.pos.y))
+	else if(getBit(p2.bmap, p2.pos.x, p2.pos.y))
 	{
 		gameState = ENDE+3;
 	}
-	if(getBit(p1.bmap, p2.pos.x, p2.pos.y))
+	else if(getBit(p2.bmap, p1.pos.x, p1.pos.y))
 	{
 		gameState = ENDE+4;
 	}
-	if(getBit(p2.bmap, p2.pos.x, p2.pos.y))
+	else if(getBit(p1.bmap, p2.pos.x, p2.pos.y))
 	{
 		gameState = ENDE+5;
 	}
@@ -182,8 +182,8 @@ void endScreen()
 	char gameover[][53] = {
 		"Das nennt man Vollkontakt!",
 		"Spieler 1 hat sich selbst getötet!",
-		"Spieler 1 ist durch die Spur von Spieler 2 gefahren!",
 		"Spieler 2 hat sich selbst getötet!",
+		"Spieler 1 ist durch die Spur von Spieler 2 gefahren!",
 		"Spieler 2 ist durch die Spur von Spieler 1 gefahren!"
 	};
 
